@@ -99,8 +99,8 @@ class DocumentLink extends React.Component<Props> {
             expanded={showChildren ? true : undefined}
             label={
               <Title bold={document?.modifiedSinceViewed || document?.new}>
+                {document?.new && <Badge>New</Badge>}  
                 {node.title || "Untitled"}
-                {document?.new && <Badge>New</Badge>}
               </Title>
             }
             depth={depth}
